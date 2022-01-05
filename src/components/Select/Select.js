@@ -25,6 +25,10 @@ const Select = ({ label, value, onChange, children }) => {
     </Wrapper>
   );
 };
+  const Wrapper = styled.div`
+    position: relative;
+    width: max-content;
+  `;
 
 const NativeSelect = styled.select`
   position: absolute;
@@ -36,11 +40,11 @@ const NativeSelect = styled.select`
 `;
 
 const PresentationalDiv = styled.div`
+  color: ${COLORS.gray700};
+  background-color: ${COLORS.transparentGray15};
   padding: 12px 16px;
   padding-right: 52x;
   font-size: ${16/16}rem;
-  color: ${COLORS.gray700};
-  background: ${COLORS.transparentGray15};
   border-radius: 8px;
 
   ${NativeSelect}:focus + & {
@@ -53,10 +57,6 @@ const PresentationalDiv = styled.div`
 
 `;
 
-const Wrapper = styled.div`
-  position: relative;
-  width: max-content;
-`;
 
 const IconWrapper = styled.div`
   position: absolute;
