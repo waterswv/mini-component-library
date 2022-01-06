@@ -6,7 +6,7 @@ import { COLORS } from '../../constants';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
 
-const styles = {
+const STYLES = {
   small: {
     fontSize: 14,
     iconSize: 16,
@@ -27,20 +27,20 @@ const IconInput = ({
   size,
   ...delegated
 }) => {
-  const style = styles[size];
+  const style = STYLES[size];
 
   return <Wrapper>
             <VisuallyHidden>{label}</VisuallyHidden>
-            <IconWrapper style={{'--size': styles.iconSize + 'px'}}>
+            <IconWrapper style={{'--size': style.iconSize + 'px'}}>
               <Icon id={icon} size={style.iconSize}/>
             </IconWrapper>
             <TextInput 
               {...delegated}
               style={{
                 '--width': width + 'px',
-                '--height': styles.height / 16 + 'rem',
-                '--border-thickness': styles.borderThickness + 'px',
-                '--font-size': styles.fontSize / 16 + 'rem',
+                '--height': style.height / 16 + 'rem',
+                '--border-thickness': style.borderThickness + 'px',
+                '--font-size': style.fontSize / 16 + 'rem',
               }}
             />
           </Wrapper>;
@@ -58,7 +58,7 @@ const Wrapper = styled.label`
 const IconWrapper = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
+  bottom: 0;
   margin: auto 0;
   height: var(--size);
 `;
