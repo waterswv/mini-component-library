@@ -43,7 +43,7 @@ const PresentationalDiv = styled.div`
   color: ${COLORS.gray700};
   background-color: ${COLORS.transparentGray15};
   padding: 12px 16px;
-  padding-right: 52x;
+  padding-right: 52px;
   font-size: ${16/16}rem;
   border-radius: 8px;
 
